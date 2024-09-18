@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
         doc.text("High School, CBSE (04/2016 - 03/2017) - CGPA: 7.8/10", 20, 160);
 
         doc.text("Skills", 20, 180);
-        doc.text("Java, HTML, CSS, JavaScript, Node.js, Express.js, React.js, Spring Boot, Python, Spring MVC, SQL, MongoDB", 20, 190, { maxWidth: 170 });
+        doc.text("Java | Python | React.js | Node.js | Spring Boot | Spring MVC | Git | GitHub | Linux | SQL | MongoDB", 20, 190, { maxWidth: 170 });
 
         doc.text("Internship", 20, 210);
         doc.text("Full stack development internship where I learned key concepts of Java and gained knowledge about backend development. I worked on a basic Spring Boot project and also learned React.js for building websites.", 20, 220, { maxWidth: 170 });

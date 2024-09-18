@@ -88,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Project 1 Description
         doc.setFont('Helvetica', 'normal'); // Back to normal font
         doc.setTextColor(51, 51, 51);
-        doc.text("Developed a comprehensive full-stack application with a Java-based REST API supporting", 20, 214, { maxWidth: 170 });
-        doc.text("CRUD operations and a dynamic website using React.js.", 20, 221, { maxWidth: 170 });
+        doc.text("Developed a comprehensive full-stack application with a Java-based REST API ", 20, 214, { maxWidth: 170 });
+        doc.text("supporting CRUD operations and a dynamic website using React.js.", 20, 221, { maxWidth: 170 });
 
         // Project 2 - Old Car Price Prediction (Bold Title)
         doc.setFont('Helvetica', 'bold'); // Bold for project title
@@ -98,9 +98,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Project 2 Description
         doc.setFont('Helvetica', 'normal'); // Back to normal font
         doc.setTextColor(51, 51, 51);
-        doc.text("Developed a predictive model using linear regression to estimate the prices of old cars and", 20, 242, { maxWidth: 170 });
-        doc.text("created a user-friendly website powered by Flask to display the predictions.", 20, 249, { maxWidth: 170 });
+        doc.text("Developed a predictive model using linear regression to estimate the prices of old ", 20, 242, { maxWidth: 170 });
+        doc.text("cars and created a user-friendly website powered by Flask to display the predictions.", 20, 249, { maxWidth: 170 });
 
         doc.save('Abdullah_Saifi_Resume.pdf');
     });
-});
+}); 

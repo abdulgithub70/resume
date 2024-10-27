@@ -113,6 +113,6 @@ document.addEventListener("DOMContentLoaded", function () {
         doc.text("Git, GitHub", 20, 288);
 
         // Save the PDF
-        doc.save('Abdullah_Saifi_Resume.pdf');
+        doc.save('AbdullahSaifi_fr.pdf');
     });
 });

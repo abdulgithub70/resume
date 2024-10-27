@@ -1,106 +1,98 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Resume page is loaded");
 
-    const downloadBtn = document.getElementById('download-btn');
+    const downloadBtn = document.getElementById('downloadBtn');
 
     downloadBtn.addEventListener('click', function () {
         // Use jsPDF to create a PDF of the resume
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
 
-        // Title (H1 equivalent)
+        // Header
         doc.setFont('Helvetica', 'bold');
-        doc.setFontSize(16); // Title font size
-        doc.setTextColor(44, 62, 80); // Dark color for title
-        doc.text("Abdullah Saifi - Full Stack Developer", 20, 25);
+        doc.setFontSize(16);
+        doc.setTextColor(44, 62, 80);
+        doc.text("Abdullah Saifi", 20, 20);
 
         // Contact Info
         doc.setFont('Helvetica', 'normal');
-        doc.setFontSize(11); // Contact info font size
-        doc.setTextColor(51, 51, 51); // Dark grey for contact info
-        doc.text("Contact No: 7053851429", 20, 35);  
-        doc.text("Email: saifiabduldelhi@gmail.com", 20, 42);
-        doc.text("GitHub: github.com/abdulgithub70", 20, 49);
-        doc.text("LinkedIn: linkedin.com/in/abdullah-saifi-ba99b32%204a", 20, 56);
-
-        // Section Title (H2 equivalent)
-        doc.setFont('Helvetica', 'bold');
-        doc.setFontSize(13); // Section title font size
-        doc.setTextColor(41, 128, 185); // Blue color for section titles
-        doc.text("Summary", 20, 70);
-
-        // Section Content with increased line spacing
-        doc.setFont('Helvetica', 'normal');
-        doc.setFontSize(11); // Content font size
+        doc.setFontSize(11);
         doc.setTextColor(51, 51, 51);
-        doc.text("I have a solid understanding of Java and am proficient in React.js, with additional skills in", 20, 77, { maxWidth: 170 });
-        doc.text("Java and Python. My experience includes working on both backend and frontend development,", 20, 84, { maxWidth: 170 });
-        doc.text("allowing me to handle full-stack projects effectively.", 20, 91, { maxWidth: 170 });
+        doc.text("New Delhi, India", 20, 30);
+        doc.text("Contact No: +(91)7053851429", 20, 37);
+        doc.text("Email: saifiabduldelhi@gmail.com", 20, 44);
+        doc.text("LinkedIn: linkedin.com/in/abdullah-saifi-ba99b32%204a", 20, 51);
+        doc.text("GitHub: github.com/abdulgithub70", 20, 58);
 
-        // Education Section
+        // Section: Education
         doc.setFont('Helvetica', 'bold');
         doc.setFontSize(13);
         doc.setTextColor(41, 128, 185);
-        doc.text("Education", 20, 105);
+        doc.text("Education", 20, 70);
 
         doc.setFont('Helvetica', 'normal');
         doc.setFontSize(11);
         doc.setTextColor(51, 51, 51);
-        doc.text("Btech Computer Science Engineering, Jamia Hamdard University", 20, 112);
-        doc.text("(08/2020 - 07/2024) - CGPA: 6.8/10", 20, 119);
-        doc.text("Intermediate, CBSE (05/2018 - 03/2019) - CGPA: 6.1/10", 20, 126);
-        doc.text("High School, CBSE (04/2016 - 03/2017) - CGPA: 7.8/10", 20, 133);
+        doc.text("B.Tech Computer Science Engineering, Jamia Hamdard University", 20, 77);
+        doc.text("CGPA: 6.8/10", 20, 84);
+        doc.text("Intermediate, CBSE (2019) - CGPA: 6.1", 20, 91);
+        doc.text("High School, CBSE (2017) - CGPA: 7.8", 20, 98);
 
-        // Skills Section
+        // Section: Skills
         doc.setFont('Helvetica', 'bold');
         doc.setFontSize(13);
         doc.setTextColor(41, 128, 185);
-        doc.text("Skills", 20, 145);
+        doc.text("Coursework / Skills", 20, 110);
 
         doc.setFont('Helvetica', 'normal');
         doc.setFontSize(11);
         doc.setTextColor(51, 51, 51);
-        doc.text("Java | Python | React.js | Node.js | Spring Boot | Spring MVC | Git | GitHub | Linux | SQL | MongoDB", 20, 152, { maxWidth: 170 });
+        doc.text("DBMS | Operating System | OOPs Concept | Web Development | DSA", 20, 117);
 
-        // Internship Section
+        // Section: Internship
         doc.setFont('Helvetica', 'bold');
         doc.setFontSize(13);
         doc.setTextColor(41, 128, 185);
-        doc.text("Internship", 20, 165);
+        doc.text("Internship", 20, 130);
 
         doc.setFont('Helvetica', 'normal');
         doc.setFontSize(11);
         doc.setTextColor(51, 51, 51);
-        doc.text("Full stack development internship where I learned key concepts of Java and gained knowledge", 20, 172, { maxWidth: 170 });
-        doc.text("about backend development. I worked on a basic Spring Boot project and also learned React.js", 20, 179, { maxWidth: 170 });
-        doc.text("for building websites.", 20, 186, { maxWidth: 170 });
+        doc.text("Alaric Tech Genius | Full Stack Web Development Training (JAVA Track)", 20, 137);
+        doc.text("Experience in Java and Spring Boot for backend, React for frontend.", 20, 144);
 
-        // Projects Section with Bold Titles
+        // Section: Projects
         doc.setFont('Helvetica', 'bold');
         doc.setFontSize(13);
         doc.setTextColor(41, 128, 185);
-        doc.text("Projects", 20, 200);
+        doc.text("Projects", 20, 157);
 
-        // Project 1 - Full-Stack CRUD Application (Bold Title)
-        doc.setFont('Helvetica', 'bold'); // Bold for project title
-        doc.text("Full-Stack CRUD Application:", 20, 207);
-
-        // Project 1 Description
-        doc.setFont('Helvetica', 'normal'); // Back to normal font
+        doc.setFont('Helvetica', 'bold');
+        doc.text("eNoteBook:", 20, 164);
+        doc.setFont('Helvetica', 'normal');
         doc.setTextColor(51, 51, 51);
-        doc.text("Developed a comprehensive full-stack application with a Java-based REST API ", 20, 214, { maxWidth: 170 });
-        doc.text("supporting CRUD operations and a dynamic website using React.js.", 20, 221, { maxWidth: 170 });
+        doc.text("MERN stack note-taking app with secure authentication and CRUD operations.", 20, 171);
 
-        // Project 2 - Old Car Price Prediction (Bold Title)
-        doc.setFont('Helvetica', 'bold'); // Bold for project title
-        doc.text("Old Car Price Prediction with Machine Learning:", 20, 235);
+        doc.setFont('Helvetica', 'bold');
+        doc.text("Voice Powered Expense Tracker:", 20, 185);
+        doc.setFont('Helvetica', 'normal');
+        doc.text("React app with Context API, Local Storage, and Web Speech API integration.", 20, 192);
 
-        // Project 2 Description
-        doc.setFont('Helvetica', 'normal'); // Back to normal font
+        // Section: Technical Skills
+        doc.setFont('Helvetica', 'bold');
+        doc.setFontSize(13);
+        doc.setTextColor(41, 128, 185);
+        doc.text("Technical Skills", 20, 205);
+
+        doc.setFont('Helvetica', 'normal');
+        doc.setFontSize(11);
         doc.setTextColor(51, 51, 51);
-        doc.text("Developed a predictive model using linear regression to estimate the prices of old ", 20, 242, { maxWidth: 170 });
-        doc.text("cars and created a user-friendly website powered by Flask to display the predictions.", 20, 249, { maxWidth: 170 });
+        doc.text("Languages: Java, HTML, CSS, JavaScript, SQL", 20, 212);
+        doc.text("Developer Tools: Eclipse IDE, STS, VS Code, IntelliJ", 20, 219);
+        doc.text("Technologies: Spring Boot, Spring MVC, ReactJS, NodeJS, ExpressJS, MongoDB,", 20, 226);
+        doc.text("MySQL, Git, GitHub", 20, 233);
 
+        // Save the PDF
         doc.save('Abdullah_Saifi_Resume.pdf');
     });
-}); 
+});

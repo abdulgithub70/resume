@@ -4,93 +4,113 @@ document.addEventListener("DOMContentLoaded", function () {
     const downloadBtn = document.getElementById('downloadBtn');
 
     downloadBtn.addEventListener('click', function () {
-        // Use jsPDF to create a PDF of the resume
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
 
-        // Header
-        doc.setFont('Helvetica', 'bold');
-        doc.setFontSize(16);
-        doc.setTextColor(44, 62, 80);
+        // Header Section
+        doc.setFont("Helvetica", "bold");
+        doc.setFontSize(18);
+        doc.setTextColor(0, 0, 0);
         doc.text("Abdullah Saifi", 20, 20);
 
-        // Contact Info
-        doc.setFont('Helvetica', 'normal');
+        doc.setFont("Helvetica", "normal");
         doc.setFontSize(11);
-        doc.setTextColor(51, 51, 51);
         doc.text("New Delhi, India", 20, 30);
-        doc.text("Contact No: +(91)7053851429", 20, 37);
-        doc.text("Email: saifiabduldelhi@gmail.com", 20, 44);
-        doc.text("LinkedIn: linkedin.com/in/abdullah-saifi-ba99b32%204a", 20, 51);
-        doc.text("GitHub: github.com/abdulgithub70", 20, 58);
+        doc.text("+(91)7053851429 saifiabduldelhi@gmail.com", 20, 36);
+        doc.setTextColor(0, 0, 255);
+        doc.textWithLink("LinkedIn", 20, 42, { url: "https://linkedin.com/in/abdullah-saifi-ba99b32%204a" });
+        doc.textWithLink("GitHub", 55, 42, { url: "https://github.com/abdulgithub70" });
 
-        // Section: Education
-        doc.setFont('Helvetica', 'bold');
+        // Education Section
+        doc.setTextColor(0, 0, 0);
+        doc.setFont("Helvetica", "bold");
         doc.setFontSize(13);
-        doc.setTextColor(41, 128, 185);
-        doc.text("Education", 20, 70);
+        doc.text("Education", 20, 55);
 
-        doc.setFont('Helvetica', 'normal');
+        doc.setFont("Helvetica", "bold");
         doc.setFontSize(11);
-        doc.setTextColor(51, 51, 51);
-        doc.text("B.Tech Computer Science Engineering, Jamia Hamdard University", 20, 77);
-        doc.text("CGPA: 6.8/10", 20, 84);
-        doc.text("Intermediate, CBSE (2019) - CGPA: 6.1", 20, 91);
-        doc.text("High School, CBSE (2017) - CGPA: 7.8", 20, 98);
+        doc.text("Jamia Hamdard University", 20, 63);
+        doc.setFont("Helvetica", "normal");
+        doc.text("Bachelor of Technology in Computer Science Engineering- CGPA- 6.7", 20, 69);
+        doc.text("2020-2024", 160, 69, { align: "right" });
+        doc.text("Intermediate | CBSE | CGPA- 6.1", 20, 75);
+        doc.text("2019", 160, 75, { align: "right" });
+        doc.text("High-School | CBSE | CGPA- 7.8", 20, 81);
+        doc.text("2017", 160, 81, { align: "right" });
 
-        // Section: Skills
-        doc.setFont('Helvetica', 'bold');
+        // Coursework / Skills Section
+        doc.setFont("Helvetica", "bold");
         doc.setFontSize(13);
-        doc.setTextColor(41, 128, 185);
-        doc.text("Coursework / Skills", 20, 110);
+        doc.setTextColor(0, 0, 0);
+        doc.text("Coursework / Skills", 20, 95);
 
-        doc.setFont('Helvetica', 'normal');
+        doc.setFont("Helvetica", "normal");
         doc.setFontSize(11);
-        doc.setTextColor(51, 51, 51);
-        doc.text("DBMS | Operating System | OOPs Concept | Web Development | DSA", 20, 117);
+        doc.text("DBMS             Operating System             OOPs Concept", 20, 102);
+        doc.text("Web Development         DSA", 20, 109);
 
-        // Section: Internship
-        doc.setFont('Helvetica', 'bold');
+        // Internship Section
+        doc.setFont("Helvetica", "bold");
         doc.setFontSize(13);
-        doc.setTextColor(41, 128, 185);
-        doc.text("Internship", 20, 130);
+        doc.text("Internship", 20, 122);
 
-        doc.setFont('Helvetica', 'normal');
+        doc.setFont("Helvetica", "bolditalic");
         doc.setFontSize(11);
-        doc.setTextColor(51, 51, 51);
-        doc.text("Alaric Tech Genius | Full Stack Web Development Training (JAVA Track)", 20, 137);
-        doc.text("Experience in Java and Spring Boot for backend, React for frontend.", 20, 144);
+        doc.text("Alaric Tech Genius | Full Stack Web Development Training (JAVA Track)", 20, 129);
 
-        // Section: Projects
-        doc.setFont('Helvetica', 'bold');
+        doc.setFont("Helvetica", "normal");
+        doc.setFontSize(10);
+        doc.text("During my Internship, I had the opportunity to work on both backend and frontend development.", 20, 135);
+        doc.text("I utilized Java and Spring Boot to build and maintain backend services, ensuring seamless integration", 20, 140);
+        doc.text("with the frontend. On the frontend, I worked with React to develop interactive and user-friendly", 20, 145);
+        doc.text("web interfaces. This hands-on experience allowed me to strengthen my skills in building full-stack", 20, 150);
+        doc.text("applications and collaborating with cross-functional teams.", 20, 155);
+
+        // Projects Section
+        doc.setFont("Helvetica", "bold");
         doc.setFontSize(13);
-        doc.setTextColor(41, 128, 185);
-        doc.text("Projects", 20, 157);
+        doc.text("PROJECTS", 20, 170);
 
-        doc.setFont('Helvetica', 'bold');
-        doc.text("eNoteBook:", 20, 164);
-        doc.setFont('Helvetica', 'normal');
-        doc.setTextColor(51, 51, 51);
-        doc.text("MERN stack note-taking app with secure authentication and CRUD operations.", 20, 171);
-
-        doc.setFont('Helvetica', 'bold');
-        doc.text("Voice Powered Expense Tracker:", 20, 185);
-        doc.setFont('Helvetica', 'normal');
-        doc.text("React app with Context API, Local Storage, and Web Speech API integration.", 20, 192);
-
-        // Section: Technical Skills
-        doc.setFont('Helvetica', 'bold');
-        doc.setFontSize(13);
-        doc.setTextColor(41, 128, 185);
-        doc.text("Technical Skills", 20, 205);
-
-        doc.setFont('Helvetica', 'normal');
+        doc.setFont("Helvetica", "bolditalic");
         doc.setFontSize(11);
-        doc.setTextColor(51, 51, 51);
-        doc.text("Languages: Java, HTML, CSS, JavaScript, SQL", 20, 212);
-        doc.text("Developer Tools: Eclipse IDE, STS, VS Code, IntelliJ", 20, 219);
-        doc.text("Technologies: Spring Boot, Spring MVC, ReactJS, NodeJS, ExpressJS, MongoDB,", 20, 226);
-        doc.text("MySQL, Git, GitHub", 20, 233);
+        doc.text("eNoteBook", 20, 177);
+        doc.setFont("Helvetica", "normal");
+        doc.text("| MongoDB, Express, React, Node.js and JWT for secure user Authentication.", 50, 177);
+
+        doc.setFont("Helvetica", "normal");
+        doc.setFontSize(10);
+        doc.text("Developed eNoteBook, a comprehensive note-taking application using the MERN stack", 20, 183);
+        doc.text("(MongoDB, Express, React, Node.js). The application enables user to create, edit and organize", 20, 188);
+        doc.text("notes with a user-friendly interface. It features user authentication, CRUD operation,", 20, 193);
+        doc.text("and persistent storage of notes. JWTs were implemented to handle user login and", 20, 198);
+        doc.text("authorization, ensuring that request to the application is authenticated.", 20, 203);
+
+        doc.setFont("Helvetica", "bolditalic");
+        doc.setFontSize(11);
+        doc.text("Voice Powered Expense Tracker", 20, 215);
+        doc.setFont("Helvetica", "normal");
+        doc.text("| React, JavaScript, Context API, Local Storage, Web Speech API.", 100, 215);
+
+        doc.setFont("Helvetica", "normal");
+        doc.setFontSize(10);
+        doc.text("Developed a comprehensive Expense Budget Tracker application using React and", 20, 221);
+        doc.text("JavaScript, incorporating advanced features such as state management with context API,", 20, 226);
+        doc.text("persistent data storage via Local Storage, and a responsive user interface designed", 20, 231);
+        doc.text("with Material UI. A standout feature of the application is the integration of voice", 20, 236);
+        doc.text("capabilities allowing users to interact with the tracker through voice commands,", 20, 241);
+        doc.text("significantly enhancing accessibility and user experience.", 20, 246);
+
+        // Technical Skills Section
+        doc.setFont("Helvetica", "bold");
+        doc.setFontSize(13);
+        doc.text("TECHNICAL SKILLS", 20, 260);
+
+        doc.setFont("Helvetica", "normal");
+        doc.setFontSize(11);
+        doc.text("Languages: Java, HTML, CSS, JavaScript, SQL", 20, 267);
+        doc.text("Developer Tools: Eclipse IDE, STS, VS Code, IntelliJ", 20, 274);
+        doc.text("Technologies: Spring Boot, Spring MVC, ReactJS, NodeJS, ExpressJS, MongoDB, MySQL,", 20, 281);
+        doc.text("Git, GitHub", 20, 288);
 
         // Save the PDF
         doc.save('Abdullah_Saifi_Resume.pdf');

@@ -1,156 +1,134 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 900px;
-    margin: 2rem auto;
-    background-color: #fff;
-    padding: 2rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    width: 800px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2, h3 {
-    font-family: 'Helvetica Neue', sans-serif;
-    margin-bottom: 10px;
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    text-transform: uppercase;
-}
-
-h2 {
-    font-size: 1.8rem;
-    color: #2980b9;
-    margin-top: 2rem;
-    border-bottom: 2px solid #2980b9;
-    padding-bottom: 0.5rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-    color: #2980b9;
-    margin-top: 1rem;
-}
-
-p, li {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Header Styles */
+/* Header */
 header {
     text-align: center;
-    margin-bottom: 2rem;
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
 }
 
 header p {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
+    font-size: 1em;
+    color: #666;
+    margin-top: 5px;
 }
 
-.contact-info p {
-    margin-bottom: 0.2rem;
-}
-
-.contact-info a {
-    color: #2980b9;
+header a {
+    color: #333;
     text-decoration: none;
 }
 
-.contact-info a:hover {
+header a:hover {
     text-decoration: underline;
 }
 
-/* Section Styles */
+/* Sections */
 section {
-    margin-bottom: 2rem;
+    margin-top: 20px;
 }
 
-section p, section ul {
-    margin-top: 0.5rem;
+section h2 {
+    font-size: 1.4em;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
-ul {
-    padding-left: 1.5rem;
+/* Education and Internship */
+.education, .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-ul li {
-    list-style-type: disc;
+.education p {
+    width: 48%;
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-/* Download Button */
-#download-btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    font-size: 1.1rem;
-    color: #fff;
-    background-color: #2980b9;
-    border: none;
+.skills span {
+    background-color: #f1f1f1;
+    padding: 5px 10px;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem;
+    margin-right: 10px;
+    font-size: 0.9em;
+    color: #333;
+    font-weight: bold;
 }
 
-#download-btn:hover {
-    background-color: #1a5a85;
+/* Project and Skills Section */
+section p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-top: 10px;
 }
 
-/* Card Styles */
-.card {
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
+section p strong {
+    color: #333;
+    font-weight: bold;
 }
 
-.card h3 {
-    color: #2c3e50;
+.skills span:hover {
+    background-color: #333;
+    color: #ffffff;
 }
 
-.card ul {
-    margin-top: 0.5rem;
-}
-
-.card ul li {
-    margin-bottom: 0.5rem;
+/* Technical Skills Section */
+.technical-skills p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
-    body {
-        padding: 1rem;
-    }
-
     .container {
-        padding: 1rem;
-        margin: 1rem auto;
+        width: 90%;
+        padding: 20px;
     }
 
-    h1 {
-        font-size: 2rem;
+    header h1 {
+        font-size: 1.8em;
     }
 
-    h2 {
-        font-size: 1.5rem;
+    header p {
+        font-size: 0.9em;
     }
 
-    h3 {
-        font-size: 1.2rem;
-    }
-
-    #download-btn {
-        width: 100%;
-        text-align: center;
+    section h2 {
+        font-size: 1.2em;
     }
 }

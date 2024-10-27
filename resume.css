@@ -112,6 +112,28 @@ section p strong {
     color: #333;
     line-height: 1.6;
 }
+.download-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Download button */
+#downloadBtn {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#downloadBtn:hover {
+    background-color: #005bb5;
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {
